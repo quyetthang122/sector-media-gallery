@@ -5,7 +5,7 @@ Sector is a Drupal distribion targeted towards Drupal site builders and site own
 
 To include this, add the repo to your composer.json
 
-"sector.media.gallery": { "url": "https://github.com/DanielVeza/sector-quiz.git", "type": "git" } 
+"sector.media.gallery": { "url": "https://github.com/quyetthang122/sector-media-gallery.git", "type": "git" } 
 
 Add the repo to your composer.json in the require section
 
