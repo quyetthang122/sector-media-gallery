@@ -5,7 +5,7 @@ Sector is a Drupal distribion targeted towards Drupal site builders and site own
 
 IMPORTANT:
 
-change name of module's composer.json file to quyetthang122/sector-media-gallery
+change name of module's composer.json file to quyetthang122/sector-media-gallery, check composer.json in repo
 
 To include this, add the repo to your composer.json
 
