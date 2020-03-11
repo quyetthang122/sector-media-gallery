@@ -4,6 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.gallery_teaser
     - media.type.image
+    - media.type.video
   module:
     - media
     - node
@@ -15,7 +16,6 @@ description: 'View used to display all media inside a gallery - provided by the 
 tag: ''
 base_table: media_field_data
 base_field: mid
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -51,7 +51,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 5
+          items_per_page: 0
           offset: 0
       style:
         type: html_list
@@ -249,6 +249,8 @@ display:
           id: status
           expose:
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
           group: 1
         bundle:
           id: bundle
@@ -260,6 +262,9 @@ display:
           entity_type: media
           entity_field: bundle
           plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
       sorts: {  }
       title: ''
       header: {  }
@@ -323,19 +328,27 @@ display:
         - user.permissions
       tags:
         - 'config:core.entity_view_display.media.file.default'
+        - 'config:core.entity_view_display.media.file.media_library'
         - 'config:core.entity_view_display.media.file.preview'
         - 'config:core.entity_view_display.media.file.short_teaser'
         - 'config:core.entity_view_display.media.file.teaser'
+        - 'config:core.entity_view_display.media.image.default'
+        - 'config:core.entity_view_display.media.image.full_width'
+        - 'config:core.entity_view_display.media.image.full_width_banner'
         - 'config:core.entity_view_display.media.image.gallery_carousel'
         - 'config:core.entity_view_display.media.image.gallery_full'
         - 'config:core.entity_view_display.media.image.gallery_teaser'
-        - 'config:core.entity_view_display.media.image.default'
-        - 'config:core.entity_view_display.media.image.full_width'
         - 'config:core.entity_view_display.media.image.half_width'
+        - 'config:core.entity_view_display.media.image.media_library'
         - 'config:core.entity_view_display.media.image.preview'
         - 'config:core.entity_view_display.media.image.teaser'
         - 'config:core.entity_view_display.media.video.default'
         - 'config:core.entity_view_display.media.video.full_width'
+        - 'config:core.entity_view_display.media.video.gallery_carousel'
+        - 'config:core.entity_view_display.media.video.gallery_full'
+        - 'config:core.entity_view_display.media.video.gallery_teaser'
+        - 'config:core.entity_view_display.media.video.media_library'
+        - 'config:core.entity_view_display.media.video.preview'
   block_1:
     display_plugin: block
     id: block_1
@@ -542,19 +555,27 @@ display:
         - user.permissions
       tags:
         - 'config:core.entity_view_display.media.file.default'
+        - 'config:core.entity_view_display.media.file.media_library'
         - 'config:core.entity_view_display.media.file.preview'
         - 'config:core.entity_view_display.media.file.short_teaser'
         - 'config:core.entity_view_display.media.file.teaser'
+        - 'config:core.entity_view_display.media.image.default'
+        - 'config:core.entity_view_display.media.image.full_width'
+        - 'config:core.entity_view_display.media.image.full_width_banner'
         - 'config:core.entity_view_display.media.image.gallery_carousel'
         - 'config:core.entity_view_display.media.image.gallery_full'
         - 'config:core.entity_view_display.media.image.gallery_teaser'
-        - 'config:core.entity_view_display.media.image.default'
-        - 'config:core.entity_view_display.media.image.full_width'
         - 'config:core.entity_view_display.media.image.half_width'
+        - 'config:core.entity_view_display.media.image.media_library'
         - 'config:core.entity_view_display.media.image.preview'
         - 'config:core.entity_view_display.media.image.teaser'
         - 'config:core.entity_view_display.media.video.default'
         - 'config:core.entity_view_display.media.video.full_width'
+        - 'config:core.entity_view_display.media.video.gallery_carousel'
+        - 'config:core.entity_view_display.media.video.gallery_full'
+        - 'config:core.entity_view_display.media.video.gallery_teaser'
+        - 'config:core.entity_view_display.media.video.media_library'
+        - 'config:core.entity_view_display.media.video.preview'
   block_3:
     display_plugin: block
     id: block_3
@@ -761,16 +782,24 @@ display:
         - user.permissions
       tags:
         - 'config:core.entity_view_display.media.file.default'
+        - 'config:core.entity_view_display.media.file.media_library'
         - 'config:core.entity_view_display.media.file.preview'
         - 'config:core.entity_view_display.media.file.short_teaser'
         - 'config:core.entity_view_display.media.file.teaser'
+        - 'config:core.entity_view_display.media.image.default'
+        - 'config:core.entity_view_display.media.image.full_width'
+        - 'config:core.entity_view_display.media.image.full_width_banner'
         - 'config:core.entity_view_display.media.image.gallery_carousel'
         - 'config:core.entity_view_display.media.image.gallery_full'
         - 'config:core.entity_view_display.media.image.gallery_teaser'
-        - 'config:core.entity_view_display.media.image.default'
-        - 'config:core.entity_view_display.media.image.full_width'
         - 'config:core.entity_view_display.media.image.half_width'
+        - 'config:core.entity_view_display.media.image.media_library'
         - 'config:core.entity_view_display.media.image.preview'
         - 'config:core.entity_view_display.media.image.teaser'
         - 'config:core.entity_view_display.media.video.default'
         - 'config:core.entity_view_display.media.video.full_width'
+        - 'config:core.entity_view_display.media.video.gallery_carousel'
+        - 'config:core.entity_view_display.media.video.gallery_full'
+        - 'config:core.entity_view_display.media.video.gallery_teaser'
+        - 'config:core.entity_view_display.media.video.media_library'
+        - 'config:core.entity_view_display.media.video.preview'

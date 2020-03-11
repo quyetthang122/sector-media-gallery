@@ -7,3 +7,4 @@ dependencies:
   - slick:slick
   - slick_views:slick_views
   - image_effects:image_effects
+  - lazy:lazy
