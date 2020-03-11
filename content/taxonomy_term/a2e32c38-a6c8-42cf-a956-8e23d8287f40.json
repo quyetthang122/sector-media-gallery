@@ -1,0 +1,89 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/taxonomy\/term\/30?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/media_gallery_display_variant"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/media_gallery_display_variant\/parent": [
+            null
+        ]
+    },
+    "tid": [
+        {
+        }
+    ],
+    "uuid": [
+        {
+            "value": "a2e32c38-a6c8-42cf-a956-8e23d8287f40"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "media_gallery_display_variant"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "name": [
+        {
+            "value": "Carousel",
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/media_gallery_display_variant\/parent": [
+            null
+        ]
+    },
+    "changed": [
+        {
+            "value": "2019-08-05T22:46:43+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "| Base 1",
+                "robots": "noindex",
+                "shortlink": "http:\/\/default\/node\/10",
+                "canonical_url": "http:\/\/default\/node\/10",
+                "og_url": "http:\/\/default\/node\/10"
+            }
+        }
+    ],
+    "rh_action": [
+        {
+            "value": "bundle_default"
+        }
+    ],
+    "rh_redirect_response": [
+        {
+            "value": 301
+        }
+    ]
+}

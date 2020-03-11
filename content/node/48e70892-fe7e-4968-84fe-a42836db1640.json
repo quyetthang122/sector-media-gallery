@@ -1,0 +1,361 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/media-galleries\/media-gallery-sample-carousel?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/media_gallery"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/media_gallery\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/media_gallery\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/media_gallery\/field_gallery_media": [
+            {
+                "href": "http:\/\/default\/image\/sample-image-landscape-media-gallery-1?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/default\/video\/sample-video-media-gallery?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/default\/image\/sample-image-landscape-media-gallery-2?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/default\/image\/sample-image-portrait-media-gallery?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/default\/image\/sample-image-landscape-media-gallery-3?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/media_gallery\/field_media_gallery_display": [
+            {
+                "href": "http:\/\/default\/taxonomy\/term\/30?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/media_gallery\/field_media_gallery_type": [
+            {
+                "href": "http:\/\/default\/taxonomy\/term\/29?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/media_gallery\/field_teaser": [
+            {
+                "href": "http:\/\/default\/image\/sample-image-landscape-media-gallery-2?_format=hal_json",
+                "lang": "en"
+            }
+        ]
+    },
+    "nid": [
+        {
+        }
+    ],
+    "uuid": [
+        {
+            "value": "48e70892-fe7e-4968-84fe-a42836db1640"
+        }
+    ],
+    "vid": [
+        {
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "media_gallery"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2019-09-16T23:04:18+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/media_gallery\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "16e3616f-fb75-4a80-ba3b-504d49836f1e"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/media_gallery\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "16e3616f-fb75-4a80-ba3b-504d49836f1e"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/media_gallery\/field_gallery_media": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/image\/sample-image-landscape-media-gallery-1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "37fd1b89-f0fa-468e-93ba-e79fb22f33b0"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/video\/sample-video-media-gallery?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/video"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "843859e1-33c0-47d3-995c-dd3820d3f807"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/image\/sample-image-landscape-media-gallery-2?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "e688a7a1-7fdf-4e2b-9e56-b633ca506875"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/image\/sample-image-portrait-media-gallery?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "5474b002-c5d4-4912-8ce4-42991d7ddd63"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/image\/sample-image-landscape-media-gallery-3?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "b9149804-4177-4e96-a088-59f4fb82b3fe"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/media_gallery\/field_media_gallery_display": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/taxonomy\/term\/30?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/media_gallery_display_variant"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "a2e32c38-a6c8-42cf-a956-8e23d8287f40"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/media_gallery\/field_media_gallery_type": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/taxonomy\/term\/29?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/media_gallery_type"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "fd1b0e70-82a2-4ba1-a892-047f48bd0b0b"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/media_gallery\/field_teaser": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/image\/sample-image-landscape-media-gallery-2?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "e688a7a1-7fdf-4e2b-9e56-b633ca506875"
+                    }
+                ],
+                "lang": "en"
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "title": [
+        {
+            "value": "Media gallery sample - carousel",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2019-08-05T22:54:30+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2019-09-16T23:04:18+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "Media gallery sample - carousel | Base1",
+                "shortlink": "http:\/\/default\/node\/10",
+                "canonical_url": "http:\/\/default\/node\/10",
+                "description": "This sample media gallery has the 'carousel' display variant, so images and videos are displayed in a pop-up carousel.",
+                "og_url": "http:\/\/default\/node\/10",
+                "og_title": "Media gallery sample - carousel",
+                "og_description": "This sample media gallery has the 'carousel' display variant, so images and videos are displayed in a pop-up carousel.",
+                "og_image_type": "image\/jpeg"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/media-galleries\/media-gallery-sample-carousel",
+            "pid": 36,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "rh_action": [
+        {
+            "value": "bundle_default"
+        }
+    ],
+    "rh_redirect_response": [
+        {
+            "value": 301
+        }
+    ],
+    "body": [
+        {
+            "value": "<p class=\"lead\">Out of the box, Sector Media Gallery&nbsp;allows you to create galleries of images and videos. This media gallery has the 'carousel' display variant, so images and videos are displayed in a pop-up carousel.<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\r\n<p>This&nbsp;is a sample content node&nbsp;of the content type&nbsp;<em>Media gallery<\/em>.&nbsp;<\/p>\r\n<\/div>\r\n",
+            "format": "basic_html",
+            "processed": "<p class=\"lead\">Out of the box, Sector Media Gallery\u00a0allows you to create galleries of images and videos. This media gallery has the 'carousel' display variant, so images and videos are displayed in a pop-up carousel.<\/p>\n\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\n<p>This\u00a0is a sample content node\u00a0of the content type\u00a0<em>Media gallery<\/em>.\u00a0<\/p>\n<\/div>",
+            "summary": "This sample media gallery has the 'carousel' display variant, so images and videos are displayed in a pop-up carousel.",
+            "lang": "en"
+        }
+    ],
+    "field_issue_date": [
+        {
+            "value": "2019-08-05",
+            "lang": "en"
+        }
+    ],
+    "field_last_updated": [
+        {
+            "value": "2019-08-05",
+            "lang": "en"
+        }
+    ],
+    "field_subtitle": [
+        {
+            "value": "This sample media gallery has the 'carousel' display variant, so images and videos are displayed in a pop-up carousel. The subtitle on a media gallery should contain a concise introduction describing the context of the gallery - for example, the location, common theme, or related event.",
+            "format": "teaser_display_text",
+            "processed": "This sample media gallery has the 'carousel' display variant, so images and videos are displayed in a pop-up carousel. The subtitle on a media gallery should contain a concise introduction describing the context of the gallery - for example, the location, common theme, or related event.",
+            "lang": "en"
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.media_gallery.body
+    - field.field.node.media_gallery.field_gallery_media
+    - field.field.node.media_gallery.field_issue_date
+    - field.field.node.media_gallery.field_last_updated
+    - field.field.node.media_gallery.field_media_gallery_display
+    - field.field.node.media_gallery.field_media_gallery_type
+    - field.field.node.media_gallery.field_metatag
+    - field.field.node.media_gallery.field_subtitle
+    - field.field.node.media_gallery.field_teaser
+    - node.type.media_gallery
+  module:
+    - text
+    - user
+id: node.media_gallery.teaser
+targetEntityType: node
+bundle: media_gallery
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_gallery_media: true
+  field_issue_date: true
+  field_last_updated: true
+  field_media_gallery_display: true
+  field_media_gallery_type: true
+  field_metatag: true
+  field_subtitle: true
+  field_teaser: true
+  search_api_excerpt: true

@@ -1,0 +1,106 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.gallery_teaser
+    - field.field.media.video.field_credit_or_caption
+    - field.field.media.video.field_description
+    - field.field.media.video.field_media_video_embed_field
+    - field.field.media.video.field_tags
+    - field.field.media.video.field_title
+    - field.field.media.video.field_transcript
+    - image.style.scale_width_media_small_
+    - media.type.video
+  module:
+    - ds
+    - image
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class:
+            slat: slat
+          ds_content: {  }
+    regions:
+      ds_content:
+        - thumbnail
+        - field_title
+id: media.video.gallery_teaser
+targetEntityType: media
+bundle: video
+mode: gallery_teaser
+content:
+  field_title:
+    type: string
+    weight: 1
+    region: ds_content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: has-margin-top-base-alternate
+            ow-at: ''
+            fis: true
+            fis-el: h3
+            fis-cl: 'slat__title has-no-margin'
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+  thumbnail:
+    type: image
+    weight: 0
+    region: ds_content
+    label: hidden
+    settings:
+      image_style: scale_width_media_small_
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            classes:
+              - media-center
+            lb-col: false
+hidden:
+  created: true
+  field_credit_or_caption: true
+  field_description: true
+  field_media_video_embed_field: true
+  field_tags: true
+  field_transcript: true
+  name: true
+  search_api_excerpt: true
+  uid: true

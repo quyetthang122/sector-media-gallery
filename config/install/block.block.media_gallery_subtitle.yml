@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+  module:
+    - block_class
+    - fieldblock
+    - node
+    - text
+  theme:
+    - sector_starter
+third_party_settings:
+  block_class:
+    classes: node__subtitle
+id: media_gallery_subtitle
+theme: sector_starter
+region: pre_content
+weight: 0
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Subtitle (Media gallery)'
+  provider: fieldblock
+  label_display: '0'
+  label_from_field: false
+  field_name: field_subtitle
+  formatter_id: text_trimmed
+  formatter_settings:
+    trim_length: 600
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      media_gallery: media_gallery
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

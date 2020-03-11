@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: scale_width_media_portrait_medium_
+label: "Sector media gallery - Scale width media portrait (Medium)\t"
+effects:
+  8d99436e-e967-49f1-97ff-2f3edd16dcb5:
+    uuid: 8d99436e-e967-49f1-97ff-2f3edd16dcb5
+    id: image_scale
+    weight: 1
+    data:
+      width: 402
+      height: null
+      upscale: false

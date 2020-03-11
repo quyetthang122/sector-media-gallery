@@ -1,0 +1,95 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/block\/43?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
+        }
+    },
+    "id": [
+        {
+        }
+    ],
+    "uuid": [
+        {
+            "value": "d740067b-4010-4458-8f49-541372c79a5f"
+        }
+    ],
+    "revision_id": [
+        {
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "basic"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2019-08-13T03:27:14+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "info": [
+        {
+            "value": "Media gallery view all link",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2019-08-13T03:27:14+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "reusable": [
+        {
+            "value": true
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "| Base 1",
+                "shortlink": "http:\/\/default\/node\/10",
+                "canonical_url": "http:\/\/default\/node\/10",
+                "og_url": "http:\/\/default\/node\/10"
+            }
+        }
+    ],
+    "body": [
+        {
+            "value": "<a class=\"btn btn-default\" href=\"\/media-galleries\">View all galleries<\/a>",
+            "format": "raw_html",
+            "processed": "<a class=\"btn btn-default\" href=\"\/media-galleries\">View all galleries<\/a>",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}

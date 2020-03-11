@@ -1,0 +1,57 @@
+<?php
+
+/**
+ * Implements hook_install().
+ * 
+ */
+function sector_media_gallery_install() {
+  setUpPermissions();
+  setUpXmlSitemap();
+}
+
+/**
+ * Helper function
+ *
+ * Set up the permissions for the media_gallery content type.
+ */
+function setUpPermissions() {
+  $roles = [
+    'content_administrator',
+    'content_editor'
+  ];
+  foreach ($roles as $role) {
+    user_role_grant_permissions(
+      $role,
+      [
+        'create media_gallery content',
+        'delete any media_gallery content',
+        'delete own media_gallery content',
+        'edit any media_gallery content',
+        'edit own media_gallery content',
+        'revert media_gallery revisions',
+        'view media_gallery revisions',
+      ]
+    );
+  }
+}
+
+/**
+ * Helper function.
+ *
+ * Set up the sitemap settings on install.
+ */
+function setUpXmlSitemap() {
+  // Check Xmlsitemap module is enabled.
+  $moduleHandler = \Drupal::service('module_handler');
+  if ($moduleHandler->moduleExists('xmlsitemap')) {
+    // Default data array for media_gallerys.
+    $data = [
+      'status' => TRUE,
+      'priority' => 0.5,
+      'changefreq' => 86400,
+    ];
+    // Load the config and save our default data.
+    \Drupal::configFactory()->getEditable("xmlsitemap.settings.node.media_gallery")->setData($data)->save();
+  }
+}
+

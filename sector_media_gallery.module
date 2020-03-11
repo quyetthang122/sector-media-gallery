@@ -1,0 +1,105 @@
+<?php
+
+/**
+ * @file
+ * Contains sector_media_gallery.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\block\Entity\Block;
+
+/**
+ * Implements hook_help().
+ */
+function sector_media_gallery_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the sector_media_gallery module.
+    case 'help.page.sector_media_gallery':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Media gallery add on for Sector') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_modules_installed().
+ *
+ * Sample content & blocks are broken on install. Lets fix this.
+ *
+ * @param $modules
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function sector_media_gallery_modules_installed($modules) {
+  // We only want to run this on install of this module.
+  if (in_array('sector_media_gallery', $modules)) {
+    $nodeUuids = [
+      '731a0405-4a24-43c2-a93c-8c03f031a8c2',
+      '48e70892-fe7e-4968-84fe-a42836db1640',
+    ];
+    $mediaUuids = [
+      '37fd1b89-f0fa-468e-93ba-e79fb22f33b0',
+      '5474b002-c5d4-4912-8ce4-42991d7ddd63',
+      '843859e1-33c0-47d3-995c-dd3820d3f807',
+      'b9149804-4177-4e96-a088-59f4fb82b3fe',
+      'e688a7a1-7fdf-4e2b-9e56-b633ca506875',
+    ];
+    // Reattach the media entities to each node.
+    $nodes = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties(['uuid' => $nodeUuids]);
+    $mediaEntities = \Drupal::entityTypeManager()->getStorage('media')->loadByProperties(['uuid' => $mediaUuids]);
+    foreach ($nodes as $node) {
+      $node->field_gallery_media = [];
+      foreach ($mediaEntities as $mediaEntity) {
+        $node->field_gallery_media[] = ['target_id' => $mediaEntity->id()];
+      }
+      $node->save();
+    }
+
+    // Fix the blocks on install.
+    // Array is structured blockName -> Term.
+    $blockTermMapping = [
+      'views_block__sector_media_gallery_single_item_block_1' => 'Carousel',
+      'views_block__sector_media_gallery_content_block_1' => 'Single page',
+      'views_block__sector_media_gallery_content_block_3' => 'Carousel',
+    ];
+    foreach ($blockTermMapping as $block => $termName) {
+      // Load block.
+      $blockEntity = Block::load($block);
+      // Load term by name.
+      $term = \Drupal::entityTypeManager()
+        ->getStorage('taxonomy_term')
+        ->loadByProperties(['name' => $termName]);
+      if ($term) {
+        // Get Term ID. EntityQuery returns an array so shift it.
+        $tid = array_shift($term)->id();
+        // Get existing conditions.
+        $blockVis = $blockEntity->getVisibilityCondition('term')->getConfiguration();
+        // Set the new tid for the term condition and save the block.
+        $blockVis['tid'][0]['target_id'] = $tid;
+        $blockEntity->setVisibilityConfig('term', $blockVis);
+        $blockEntity->save();
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_page_attachments().
+ *
+ * Attach the media_gallery library to all Media gallery nodes.
+ *
+ * @param array $attachments
+ */
+function sector_media_gallery_page_attachments(array &$attachments) {
+  if (\Drupal::routeMatch()->getParameter('node')) {
+    $entity = \Drupal::routeMatch()->getParameter('node');
+    if ($entity->bundle() == 'media_gallery') {
+      $attachments['#attached']['library'][] = 'sector_media_gallery/media_gallery';
+    }
+  }
+}
+
+
+

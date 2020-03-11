@@ -1,0 +1,9 @@
+name: 'Sector Media Gallery'
+type: module
+description: 'Media gallery add on for Sector'
+core: 8.x
+package: 'Sector'
+dependencies:
+  - slick:slick
+  - slick_views:slick_views
+  - image_effects:image_effects

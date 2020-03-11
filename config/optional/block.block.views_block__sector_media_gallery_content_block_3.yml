@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sector_media_gallery_content
+  module:
+    - term_condition
+    - views
+  theme:
+    - sector_starter
+id: views_block__sector_media_gallery_content_block_3
+theme: sector_starter
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:sector_media_gallery_content-block_3'
+settings:
+  id: 'views_block:sector_media_gallery_content-block_3'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  term:
+    id: term
+    tid:
+      -
+        target_id: '30'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

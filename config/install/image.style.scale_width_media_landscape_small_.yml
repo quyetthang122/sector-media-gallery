@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: scale_width_media_landscape_small_
+label: 'Sector media gallery - Scale width media landscape (Small)'
+effects:
+  567d4bdf-7728-429f-b259-cd9c994ba81a:
+    uuid: 567d4bdf-7728-429f-b259-cd9c994ba81a
+    id: image_scale
+    weight: 1
+    data:
+      width: 400
+      height: null
+      upscale: false

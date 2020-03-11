@@ -1,0 +1,41 @@
+{
+    "name": "sector_media_gallery",
+    "type": "drupal-module",
+    "description": "Media gallery add on for Sector",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/sector_media_gallery",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/sector_media_gallery",
+        "source": "http://cgit.drupalcode.org/sector_media_gallery"
+    },
+    "repositories": [
+    {
+        "type": "composer",
+        "url": "https://asset-packagist.org"
+    }],
+    "require": {
+        "drupal/image_effects": "^2.3",
+        "drupal/slick": "^1.1",
+        "drupal/slick_views": "^2.0",
+        "vardot/blazy": "1.8.2.1",
+        "vardot/slick": "1.6.0.1",
+        "drupal/lazy": "^3.0",
+        "bower-asset/lazysizes": "^5.1"
+    },
+    "extra": {
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
+        "installer-paths": {
+            "web/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ]
+        }
+    }
+
+}

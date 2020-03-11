@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - node
+  theme:
+    - sector_starter
+third_party_settings:
+  block_class:
+    classes: has-margin-top-double
+id: mediagalleryviewalllink
+theme: sector_starter
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:d740067b-4010-4458-8f49-541372c79a5f'
+settings:
+  id: 'block_content:d740067b-4010-4458-8f49-541372c79a5f'
+  label: 'Sector media gallery view all link'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      media_gallery: media_gallery
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

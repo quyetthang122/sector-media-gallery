@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.scale_width_media_landscape_medium_
+    - image.style.scale_width_media_portrait_medium_
+  module:
+    - image_effects
+name: scale_width_media_medium_
+label: 'Sector media gallery - Scale width media (Medium)'
+effects:
+  c414c516-4ac4-4d5c-9b50-452e41d8a503:
+    uuid: c414c516-4ac4-4d5c-9b50-452e41d8a503
+    id: image_effects_aspect_switcher
+    weight: 1
+    data:
+      landscape_image_style: scale_width_media_landscape_medium_
+      portrait_image_style: scale_width_media_portrait_medium_
+      ratio_adjustment: !!float 1

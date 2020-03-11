@@ -1,0 +1,89 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/taxonomy\/term\/29?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/media_gallery_display_variant"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/media_gallery_display_variant\/parent": [
+            null
+        ]
+    },
+    "tid": [
+        {
+        }
+    ],
+    "uuid": [
+        {
+            "value": "4329017e-5986-4f43-a015-2b769d9d541d"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "media_gallery_display_variant"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "name": [
+        {
+            "value": "Single page",
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/media_gallery_display_variant\/parent": [
+            null
+        ]
+    },
+    "changed": [
+        {
+            "value": "2019-08-05T22:46:35+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "| Base 1",
+                "robots": "noindex",
+                "shortlink": "http:\/\/default\/node\/10",
+                "canonical_url": "http:\/\/default\/node\/10",
+                "og_url": "http:\/\/default\/node\/10"
+            }
+        }
+    ],
+    "rh_action": [
+        {
+            "value": "bundle_default"
+        }
+    ],
+    "rh_redirect_response": [
+        {
+            "value": 301
+        }
+    ]
+}

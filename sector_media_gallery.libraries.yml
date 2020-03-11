@@ -1,0 +1,8 @@
+media_gallery:
+  version: "1.0.x"
+  js:
+    js/sector.media_gallery.js: {}
+  dependencies:
+    - core/jquery
+    - core/modernizr
+    - core/jquery.once

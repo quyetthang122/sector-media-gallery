@@ -1,0 +1,107 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.gallery_teaser
+    - field.field.media.image.field_credit_or_caption
+    - field.field.media.image.field_description
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_tags
+    - field.field.media.image.field_title
+    - image.style.scale_width_media_small_
+    - media.type.image
+  module:
+    - ds
+    - image
+    - lazy
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - field_media_image
+        - field_title
+id: media.image.gallery_teaser
+targetEntityType: media
+bundle: image
+mode: gallery_teaser
+content:
+  field_media_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: scale_width_media_small_
+      image_link: ''
+    third_party_settings:
+      lazy:
+        lazy_image: '1'
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            classes:
+              - media-center
+            lb-col: false
+    type: image
+    region: ds_content
+  field_title:
+    type: string
+    weight: 1
+    region: ds_content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: has-margin-top-base-alternate
+            ow-at: ''
+            fis: true
+            fis-el: h3
+            fis-cl: 'slat__title has-no-margin'
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+hidden:
+  created: true
+  field_credit_or_caption: true
+  field_description: true
+  field_tags: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

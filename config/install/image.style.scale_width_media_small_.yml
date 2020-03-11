@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.scale_width_media_landscape_small_
+    - image.style.scale_width_media_portrait_small_
+  module:
+    - image_effects
+name: scale_width_media_small_
+label: 'Sector media gallery - Scale width media (Small)'
+effects:
+  9873715c-a5ea-4fb8-afc2-47c332c6e473:
+    uuid: 9873715c-a5ea-4fb8-afc2-47c332c6e473
+    id: image_effects_aspect_switcher
+    weight: 1
+    data:
+      landscape_image_style: scale_width_media_landscape_small_
+      portrait_image_style: scale_width_media_portrait_small_
+      ratio_adjustment: !!float 1

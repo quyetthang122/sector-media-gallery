@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: media_galleries_node_title_
+label: 'Sector media galleries'
+type: 'canonical_entities:node'
+pattern: 'media-galleries/[node:title]'
+selection_criteria:
+  4c1552d2-2ac2-4920-802e-fd86002d2e34:
+    id: node_type
+    bundles:
+      media_gallery: media_gallery
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+weight: -5
+relationships: {  }

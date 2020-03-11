@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.scale_width_media_large_
+    - image.style.scale_width_media_medium_
+  theme:
+    - sector_starter
+id: scale_width_media
+label: 'Sector media gallery - Scale width media'
+image_style_mappings:
+  -
+    breakpoint_id: sector_starter.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: scale_width_media_large_
+  -
+    breakpoint_id: sector_starter.medium
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: scale_width_media_medium_
+breakpoint_group: sector_starter
+fallback_image_style: scale_width_media_medium_

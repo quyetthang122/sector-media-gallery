@@ -1,0 +1,149 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.gallery_full
+    - field.field.media.video.field_credit_or_caption
+    - field.field.media.video.field_description
+    - field.field.media.video.field_media_video_embed_field
+    - field.field.media.video.field_tags
+    - field.field.media.video.field_title
+    - field.field.media.video.field_transcript
+    - media.type.video
+  module:
+    - ds
+    - field_formatter_filter
+    - field_group
+    - text
+    - video_embed_field
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class:
+            gallery__inner: gallery__inner
+          ds_content: {  }
+    regions:
+      ds_content:
+        - field_media_video_embed_field
+        - field_description
+        - field_credit_or_caption
+        - group_media
+        - group_content
+  field_group:
+    group_media:
+      children:
+        - field_media_video_embed_field
+      parent_name: ''
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: gallery__media
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Media
+      region: hidden
+    group_content:
+      children:
+        - field_description
+        - field_credit_or_caption
+      parent_name: ''
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: gallery__content
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Content
+      region: hidden
+id: media.video.gallery_full
+targetEntityType: media
+bundle: video
+mode: gallery_full
+content:
+  field_credit_or_caption:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      field_formatter_filter:
+        format: restricted_basic_html
+      ds:
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            classes:
+              - has-margin-top-base
+              - caption
+            lb-col: false
+    type: text_default
+    region: ds_content
+  field_description:
+    type: text_default
+    weight: 0
+    region: ds_content
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      field_formatter_filter:
+        format: full_html
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            classes:
+              - prose
+            lb-col: false
+  field_media_video_embed_field:
+    weight: 0
+    label: hidden
+    settings:
+      autoplay: true
+      responsive: true
+      width: 854
+      height: 480
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            classes:
+              - media-center
+            lb-col: false
+    type: video_embed_field_video
+    region: ds_content
+hidden:
+  created: true
+  field_tags: true
+  field_title: true
+  field_transcript: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true
